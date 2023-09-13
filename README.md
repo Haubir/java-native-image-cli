@@ -21,3 +21,7 @@ Run the gradle task `nativeCompile`, either from your IDE or from the terminal:
 A binary will be compiled and outputted to: `./build/native/nativeCompile/omegapoint-cli`
 
 Run it using `./omegapoint-cli`
+
+### Install gum
+
+The CLI uses Gum for some neat UI rendering. Install it before running the CLI by following the instructions relevant to your OS and environment [here](https://github.com/charmbracelet/gum#installation).

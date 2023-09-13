@@ -21,6 +21,7 @@ graalvmNative {
             }
             verbose = true
             sharedLibrary = false
+            quickBuild = true
             jvmArgs.add("-Djava.awt.headless=false")
             jvmArgs.add("--enable-preview")
             buildArgs.add("--enable-url-protocols=https")
