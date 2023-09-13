@@ -1,6 +1,6 @@
 # java-native-image-cli
 
-An example of how to create a platform independent CLI written in Java that runs on a GraalVM Native Image instead of the JVM.
+An example of how to create a platform independent CLI written in Java that runs on a GraalVM Native Image instead of the JVM (to improve runtime performance).
 
 ## Building a native executable
 
