@@ -22,15 +22,6 @@ public class Hello implements Callable<Validation<Integer, Integer>> {
         this.gum = gum;
     }
 
-    private static Validation<List<String>, FullName> validateInput(final String firstName, final String lastName) {
-        return Validation.combine(
-                        FirstName.validate(firstName),
-                        LastName.validate(lastName)
-                )
-                .ap(FullName::new)
-                .mapError(Seq::asJava);
-    }
-
     @Override
     public Validation<Integer, Integer> call() {
         // Gum handles user input and also renders the terminal for us!
@@ -41,6 +32,15 @@ public class Hello implements Callable<Validation<Integer, Integer>> {
         return validateInput(firstName, lastName)
                 .map(this::greetUser)
                 .mapError(this::invalidInput);
+    }
+
+    private Validation<List<String>, FullName> validateInput(final String firstName, final String lastName) {
+        return Validation.combine(
+                        FirstName.validate(firstName),
+                        LastName.validate(lastName)
+                )
+                .ap(FullName::new)
+                .mapError(Seq::asJava);
     }
 
     private Integer invalidInput(final List<String> reasons) {
