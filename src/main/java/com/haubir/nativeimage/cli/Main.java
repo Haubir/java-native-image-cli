@@ -1,5 +1,6 @@
 package com.haubir.nativeimage.cli;
 
+import com.haubir.nativeimage.cli.commands.Hello;
 import com.haubir.nativeimage.cli.commands.Status;
 import com.haubir.nativeimage.cli.gum.CommandExecutor;
 import com.haubir.nativeimage.cli.gum.Gum;
@@ -17,7 +18,8 @@ public class Main {
         final var gum = new Gum(commandExecutor, spinner);
 
         final var commandLine = new CommandLine(new OmegapointCLI())
-                .addSubcommand(new Status(gum));
+                .addSubcommand(new Status(gum))
+                .addSubcommand(new Hello(gum));
 
         if (args.length < 1) {
             commandLine.usage(System.out);

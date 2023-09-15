@@ -18,9 +18,9 @@ Run the gradle task `nativeCompile`, either from your IDE or from the terminal:
 
 `./gradlew nativeCompile`
 
-A binary will be compiled and outputted to: `./build/native/nativeCompile/omegapoint-cli`
+A binary will be compiled and outputted to: `build/native/nativeCompile/omegapoint-cli`
 
-Run it using `./omegapoint-cli`
+Run it using`./build/native/nativeCompile/omegapoint-cli`
 
 ### Install gum
 

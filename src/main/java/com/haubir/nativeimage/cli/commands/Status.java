@@ -1,6 +1,7 @@
 package com.haubir.nativeimage.cli.commands;
 
 import com.haubir.nativeimage.cli.gum.Gum;
+import io.vavr.control.Validation;
 import java.util.concurrent.Callable;
 import picocli.CommandLine.Command;
 
@@ -9,7 +10,7 @@ import picocli.CommandLine.Command;
         description = "Status of something",
         mixinStandardHelpOptions = true
 )
-public class Status implements Callable<Integer> {
+public class Status implements Callable<Validation<Integer, Integer>> {
     private final Gum gum;
 
     public Status(final Gum gum) {
@@ -17,8 +18,8 @@ public class Status implements Callable<Integer> {
     }
 
     @Override
-    public Integer call() {
+    public Validation<Integer, Integer> call() {
         gum.message("To be implemented.");
-        return 0;
+        return Validation.valid(0);
     }
 }

@@ -40,6 +40,10 @@ dependencies {
     // jline, interactive shell stuff, see https://github.com/jline/jline3
     implementation 'org.jline:jline:3.23.0'
 
+    // Validation and functional flow
+    implementation 'org.apache.commons:commons-lang3:3.13.0'
+    implementation 'io.vavr:vavr:0.9.0'
+
     // Http client
     implementation 'org.apache.httpcomponents.client5:httpclient5-fluent:5.2.1'
 
