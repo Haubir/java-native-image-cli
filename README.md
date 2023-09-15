@@ -13,15 +13,15 @@ After downloading, please follow the instructions for:
 - [Windows](https://www.graalvm.org/latest/docs/getting-started/windows/)
 - [Linux](https://www.graalvm.org/latest/docs/getting-started/linux/)
 
+### Install gum
+
+The CLI uses Gum for some neat UI rendering. Install it before running the CLI by following the instructions relevant to your OS and environment [here](https://github.com/charmbracelet/gum#installation).
+
 ### Build the native image
 Run the gradle task `nativeCompile`, either from your IDE or from the terminal:
 
 `./gradlew nativeCompile`
 
-A binary will be compiled and outputted to: `build/native/nativeCompile/omegapoint-cli`
+A binary will be compiled and outputted to: `build/native/nativeCompile/omegapoint-cli`.
 
-Run it using`./build/native/nativeCompile/omegapoint-cli`
-
-### Install gum
-
-The CLI uses Gum for some neat UI rendering. Install it before running the CLI by following the instructions relevant to your OS and environment [here](https://github.com/charmbracelet/gum#installation).
+Run it using`./build/native/nativeCompile/omegapoint-cli`!
